@@ -10,5 +10,12 @@ namespace ByteBankAdm.Funcionarios
         {
             return Salario * 0.10;
         }
+
+        public static int TotalDeFuncionarios { get; private set; }
+
+        public Funcionario()
+        {
+            TotalDeFuncionarios++;
+        }
     }
 }

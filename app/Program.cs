@@ -9,6 +9,7 @@ Funcionario andre = new Funcionario();
 andre.Nome = "André";
 andre.Cpf = "546.879.157-20";
 andre.Salario = 2000;
+Console.WriteLine("Total de funcionários: " + Funcionario.TotalDeFuncionarios);
 
 gerenciador.Registrar(andre);
 
@@ -16,6 +17,7 @@ Diretor maria = new Diretor();
 maria.Nome = "Maria";
 maria.Cpf = "454.658.148-3";
 maria.Salario = 5000;
+Console.WriteLine("Total de funcionários: " + Funcionario.TotalDeFuncionarios);
 
 gerenciador.Registrar(maria);
 
