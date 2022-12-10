@@ -5,17 +5,15 @@ Console.WriteLine("Boas vindas ao ByteBank Administração!\n");
 
 GerenciadorBonificacao gerenciador = new GerenciadorBonificacao();
 
-Funcionario andre = new Funcionario();
+Funcionario andre = new Funcionario("546.879.157-20");
 andre.Nome = "André";
-andre.Cpf = "546.879.157-20";
 andre.Salario = 2000;
 Console.WriteLine("Total de funcionários: " + Funcionario.TotalDeFuncionarios);
 
 gerenciador.Registrar(andre);
 
-Diretor maria = new Diretor();
+Diretor maria = new Diretor("454.658.148-3");
 maria.Nome = "Maria";
-maria.Cpf = "454.658.148-3";
 maria.Salario = 5000;
 Console.WriteLine("Total de funcionários: " + Funcionario.TotalDeFuncionarios);
 
