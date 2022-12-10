@@ -4,7 +4,7 @@ namespace ByteBankAdm.Funcionarios
     {
         public string Nome { get; set; } = "";
         public string Cpf { get; private set; } = "";
-        public double Salario { get; set; }
+        public double Salario { get; protected set; }
 
         public virtual double GetBonificacao()
         {
@@ -13,10 +13,16 @@ namespace ByteBankAdm.Funcionarios
 
         public static int TotalDeFuncionarios { get; private set; }
 
-        public Funcionario(string cpf)
+        public Funcionario(string cpf, double salario)
         {
             TotalDeFuncionarios++;
             Cpf = cpf;
+            Salario = salario;
+        }
+
+        public virtual void AumentarSalario()
+        {
+            this.Salario *= 1.1;
         }
     }
 }
