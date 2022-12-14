@@ -4,7 +4,7 @@ using ByteBankAdm.Funcionarios;
 
 namespace ByteBankAdm.Utilitario
 {
-    public class GerenciadorBonificacao
+    public class GerenciadorDeBonificacao
     {
         private double _totalBonificacao;
 
