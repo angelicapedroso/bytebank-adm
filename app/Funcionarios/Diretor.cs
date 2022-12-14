@@ -1,6 +1,8 @@
+using ByteBankAdm.SistemaInterno;
+
 namespace ByteBankAdm.Funcionarios
 {
-    public class Diretor : Funcionario
+    public class Diretor : Autenticavel
     {
         public Diretor(string cpf) : base(cpf, 5000) { }
 

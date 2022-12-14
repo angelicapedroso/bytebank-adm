@@ -1,12 +1,35 @@
 ﻿using ByteBankAdm.Funcionarios;
 using ByteBankAdm.Utilitario;
+using ByteBankAdm.SistemaInterno;
 
 Console.WriteLine("\n");
 
-Console.WriteLine("### Calculando Bonificação ###");
+// Console.WriteLine("### Calculando Bonificação ###");
 CalcularBonificacao();
 
+Console.WriteLine("### Usando Sistema Interno ###");
+UsarSistema();
+
 Console.ReadKey();
+
+void UsarSistema()
+{
+    SistemaInterno sistemaInterno = new SistemaInterno();
+
+    Diretor roberta = new Diretor("159.753.398-04");
+    roberta.Nome = "Roberta";
+    roberta.Senha = "123";
+
+    GerenteDeConta ursula = new GerenteDeConta("326.985.628-89");
+    ursula.Nome = "Ursula";
+    ursula.Senha = "321";
+
+    sistemaInterno.Logar(roberta, "123");
+    sistemaInterno.Logar(roberta, "321");
+
+    sistemaInterno.Logar(ursula, "123");
+    sistemaInterno.Logar(ursula, "321");
+}
 
 static void CalcularBonificacao()
 {

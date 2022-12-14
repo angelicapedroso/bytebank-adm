@@ -1,6 +1,8 @@
+using ByteBankAdm.SistemaInterno;
+
 namespace ByteBankAdm.Funcionarios
 {
-    public class GerenteDeConta : Funcionario
+    public class GerenteDeConta : Autenticavel
     {
         public GerenteDeConta(string cpf) : base(cpf, 4000) { }
 
