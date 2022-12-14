@@ -2,7 +2,7 @@ using ByteBankAdm.SistemaInterno;
 
 namespace ByteBankAdm.Funcionarios
 {
-    public class Diretor : Autenticavel
+    public class Diretor : FuncionarioAutenticavel
     {
         public Diretor(string cpf) : base(cpf, 5000) { }
 
@@ -15,5 +15,5 @@ namespace ByteBankAdm.Funcionarios
         {
             Salario *= 1.15;
         }
-    }
+  }
 }

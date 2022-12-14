@@ -1,6 +1,7 @@
 ﻿using ByteBankAdm.Funcionarios;
 using ByteBankAdm.Utilitario;
 using ByteBankAdm.SistemaInterno;
+using ByteBankAdm.ParceiroComercial;
 
 Console.WriteLine("\n");
 
@@ -24,11 +25,16 @@ void UsarSistema()
     ursula.Nome = "Ursula";
     ursula.Senha = "321";
 
+    ParceiroComercial parceiro = new ParceiroComercial();
+    parceiro.Senha = "123";
+
     sistemaInterno.Logar(roberta, "123");
     sistemaInterno.Logar(roberta, "321");
 
     sistemaInterno.Logar(ursula, "123");
     sistemaInterno.Logar(ursula, "321");
+
+    sistemaInterno.Logar(parceiro, "123");
 }
 
 static void CalcularBonificacao()
