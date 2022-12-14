@@ -1,34 +1,39 @@
 ﻿using ByteBankAdm.Funcionarios;
 using ByteBankAdm.Utilitario;
 
-Console.WriteLine("Boas vindas ao ByteBank Administração!\n");
+Console.WriteLine("\n");
 
-GerenciadorBonificacao gerenciador = new GerenciadorBonificacao();
-
-Funcionario andre = new Funcionario("546.879.157-20", 2000);
-andre.Nome = "André";
-Console.WriteLine("Total de funcionários: " + Funcionario.TotalDeFuncionarios);
-
-gerenciador.Registrar(andre);
-
-Diretor maria = new Diretor("454.658.148-3", 5000);
-maria.Nome = "Maria";
-Console.WriteLine("Total de funcionários: " + Funcionario.TotalDeFuncionarios);
-
-gerenciador.Registrar(maria);
-
-Console.WriteLine(andre.Nome);
-Console.WriteLine(andre.GetBonificacao());
-
-Console.WriteLine(maria.Nome);
-Console.WriteLine(maria.GetBonificacao());
-
-Console.WriteLine("Total de bonificações: " + gerenciador.GetTotalBonificacao());
-
-andre.AumentarSalario();
-Console.WriteLine("Salário do André: " + andre.Salario);
-
-maria.AumentarSalario();
-Console.WriteLine("Salário da Maria: " + maria.Salario);
+Console.WriteLine("### Calculando Bonificação ###");
+CalcularBonificacao();
 
 Console.ReadKey();
+
+static void CalcularBonificacao()
+{
+    GerenciadorDeBonificacao gerenciadorBonificacao = new GerenciadorDeBonificacao();
+
+    Funcionario pedro = new Designer("833.222.048-39");
+    pedro.Nome = "Pedro";
+
+    Funcionario roberta = new Diretor("159.753.398-04");
+    roberta.Nome = "Roberta";
+
+    Funcionario igor = new Auxiliar("981.198.778-53");
+    igor.Nome = "Igor";
+
+    Funcionario camila = new GerenteDeConta("326.985.628-89");
+    camila.Nome = "Camila";
+
+    Desenvolvedor guilherme = new Desenvolvedor("456.175.468-20");
+    guilherme.Nome = "Guilherme";
+
+    gerenciadorBonificacao.Registrar(guilherme);
+    gerenciadorBonificacao.Registrar(pedro);
+    gerenciadorBonificacao.Registrar(roberta);
+    gerenciadorBonificacao.Registrar(igor);
+    gerenciadorBonificacao.Registrar(camila);
+
+    Console.WriteLine(
+        "Total de bonificações do mês " + gerenciadorBonificacao.GetTotalBonificacao()
+    );
+}

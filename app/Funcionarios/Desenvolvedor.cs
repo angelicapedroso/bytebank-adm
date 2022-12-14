@@ -1,17 +1,17 @@
 namespace ByteBankAdm.Funcionarios
 {
-    public class Diretor : Funcionario
+    public class Desenvolvedor : Funcionario
     {
-        public Diretor(string cpf) : base(cpf, 5000) { }
+        public Desenvolvedor(string cpf) : base(cpf, 3000) { }
 
         public override double GetBonificacao()
         {
-            return Salario * 0.5;
+            return Salario * 0.1;
         }
 
         public override void AumentarSalario()
         {
-            Salario *= 1.15;
+            Salario *= 0.15;
         }
     }
 }
